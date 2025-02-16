@@ -36,36 +36,36 @@ app.post("/login", (req,res,next)=>{
 })
 
 // category
-app.post('/category', (req,res,next)=>{
+app.post('/category', verifyJWTToken, (req,res,next)=>{
     addCategory(req,res,next)
 })
 
-app.get('/categories', (req,res,next)=>{
+app.get('/categories', verifyJWTToken, (req,res,next)=>{
     getCategory(req,res,next)
 })
 
-app.put('/category/:categoryId', (req,res,next)=>{
+app.put('/category/:categoryId', verifyJWTToken, (req,res,next)=>{
     updateCategory(req,res,next)
 })
 
-app.delete('/category/:categoryId', (req,res,next)=>{
+app.delete('/category/:categoryId', verifyJWTToken, (req,res,next)=>{
     deleteCategory(req,res,next)
 })
  
 //service
-app.post('/category/:categoryId/service', (req,res,next)=>{
+app.post('/category/:categoryId/service', verifyJWTToken, (req,res,next)=>{
     addService(req,res,next)
 })
 
-app.get('/category/:categoryId/services', (req,res,next)=>{
+app.get('/category/:categoryId/services', verifyJWTToken, (req,res,next)=>{
     getService(req,res,next)
 })
 
-app.put('/category/:categoryId/service/:serviceId', (req,res,next)=>{
+app.put('/category/:categoryId/service/:serviceId', verifyJWTToken, (req,res,next)=>{
     updateService(req,res,next)
 })
 
-app.delete('/category/:categoryId/service/:serviceId', (req,res,next)=>{
+app.delete('/category/:categoryId/service/:serviceId', verifyJWTToken, (req,res,next)=>{
     deleteService(req,res,next)
 })
 
