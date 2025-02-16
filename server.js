@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import verifyJWTToken from './middleware/jwt.js';
 import sequelize from './config/sql.config.js';
 import { connectDB } from './config/sql.config.js';
-import { addCategory,updateCategory,getCategory,deleteCategory } from './controller/mysql.controller.js';
+import { addCategory,updateCategory,getCategory,deleteCategory,addService,getService,updateService,deleteService } from './controller/mysql.controller.js';
 
 // import db from "./config/db.config.js"
 // import { addCategory,updateCategory,getCategory,deleteCategory } from './controller/category.controller.js';
